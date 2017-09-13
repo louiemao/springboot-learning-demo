@@ -42,10 +42,6 @@
         <!-- Spring Boot 之 集成druid -->
         <module>springboot-druid</module>
 
-
-
-
-
     </modules>
 
 
