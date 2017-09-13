@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.louie.learning.springboot</groupId>
+    <artifactId>springboot-learning-demo</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+
+    <modules>
+        <!--springboot入门篇-->
+        <!--springboot启动原理解析-->
+
+        <!--基础-->
+        <!-- Spring Boot 之 HelloWorld 详解 -->
+        <module>springboot-helloworld</module>
+        <!-- Spring Boot 之 配置文件详解 -->
+        <module>springboot-properties</module>
+        <!-- Spring Boot 之 日志 -->
+        <module>springboot-log</module>
+
+        <!--网页-->
+        <!-- Spring Boot 之 Thymeleaf -->
+        <module>springboot-thymeleaf</module>
+        <!-- Spring Boot 之 jsp -->
+        <module>springboot-jsp</module>
+
+        <!--数据访问-->
+        <!-- Spring Boot 之 Spring Data JPA -->
+        <module>springboot-jpa</module>
+        <!-- Spring Boot 之 Mybatis -->
+        <module>springboot-mybatis</module>
+
+        <!--安全-->
+        <module>springboot-shiro</module>
+
+        <!--扩展-->
+        <!-- Spring Boot 之 使用fastjson替换jackson进行json转化 -->
+        <module>springboot-fastjson</module>
+        <!-- Spring Boot 之 集成druid -->
+        <module>springboot-druid</module>
+
+
+
+
+
+    </modules>
+
+
+</project>
