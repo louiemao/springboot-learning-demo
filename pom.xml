@@ -41,6 +41,7 @@
         <module>springboot-fastjson</module>
         <!-- Spring Boot 之 集成druid -->
         <module>springboot-druid</module>
+        <module>springboot-ehcache</module>
 
     </modules>
 
