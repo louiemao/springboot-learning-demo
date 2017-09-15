@@ -1,6 +1,6 @@
 # springboot + EhCache
 
-### SpringBoot 缓存
+### SpringBoot 缓存
 在 Spring Boot中，通过`@EnableCaching`注解自动化配置合适的缓存管理器（CacheManager），Spring Boot根据下面的顺序去侦测缓存提供者：
 *   Generic
 *   JCache (JSR-107)
@@ -51,9 +51,9 @@
 *   clearOnFlush：内存数量最大时是否清除。
 *   memoryStoreEvictionPolicy:可选策略有：LRU（最近最少使用，默认策略）、FIFO（先进先出）、LFU（最少访问次数）。
 
-> FIFO，first in first out，先进先出。
-> LFU， Less Frequently Used，一直以来最少被使用的。如上面所讲，缓存的元素有一个hit属性，hit值最小的将会被清出缓存。
-> LRU，Least Recently Used，最近最少使用的，缓存的元素有一个时间戳，当缓存容量满了，而又需要腾出地方来缓存新的元素的时候，那么现有缓存元素中时间戳离当前时间最远的元素将被清出缓存。
+> * FIFO，first in first out，先进先出。
+> * LFU， Less Frequently Used，一直以来最少被使用的。如上面所讲，缓存的元素有一个hit属性，hit值最小的将会被清出缓存。
+> * LRU，Least Recently Used，最近最少使用的，缓存的元素有一个时间戳，当缓存容量满了，而又需要腾出地方来缓存新的元素的时候，那么现有缓存元素中时间戳离当前时间最远的元素将被清出缓存。
 
 
 ### SpringBoot 中的缓存注解
