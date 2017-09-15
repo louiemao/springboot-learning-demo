@@ -13,26 +13,28 @@
 
 
 ### 相应依赖 pom.xml
-    <!--开启 cache 缓存-->
-    <dependency>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-cache</artifactId>
-    </dependency>
-    <!-- ehcache 缓存 -->
-    <dependency>
-        <groupId>net.sf.ehcache</groupId>
-        <artifactId>ehcache</artifactId>
-    </dependency>
-
+``` 注释
+<!--开启 cache 缓存-->
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-cache</artifactId>
+</dependency>
+<!-- ehcache 缓存 -->
+<dependency>
+    <groupId>net.sf.ehcache</groupId>
+    <artifactId>ehcache</artifactId>
+</dependency>
+```
 
 ### EhCache的配置文件 ehcache.xml
-    <?xml version="1.0" encoding="UTF-8"?>
-    <ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-             xsi:noNamespaceSchemaLocation="http://ehcache.org/ehcache.xsd"
-             updateCheck="false">
-       
-    </ehcache>
+``` 注释
+<?xml version="1.0" encoding="UTF-8"?>
+<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="http://ehcache.org/ehcache.xsd"
+         updateCheck="false">
 
+</ehcache>
+```
 
 ### ehcache.xml 中的参数配置解释
 
