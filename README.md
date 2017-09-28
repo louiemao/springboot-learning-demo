@@ -1,29 +1,33 @@
 # springboot-learning-demo
 doc文件夹中有各个子项目的详细说明
 
-# doc文档说明
+# 说明
 springboot入门篇<br/>
 springboot启动原理解析<br/>
 
 基础<br/>
-springboot-helloworld(Spring Boot之HelloWorld详解)<br/>
-springboot-properties(Spring Boot之配置文件详解)<br/>
-springboot-log(Spring Boot之日志)<br/>
+springboot-helloworld<br/>
+springboot-properties(配置文件详解)<br/>
+springboot-log(日志,包括logback,log4j2)<br/>
 
 Web<br/>
-springboot-thymeleaf(Spring Boot之Thymeleaf)<br/>
-springboot-jsp(Spring Boot之jsp)<br/>
+springboot-thymeleaf<br/>
+springboot-jsp<br/>
+springboot-freemarker<br/>
 
 数据访问<br/>
-springboot-jpa(Spring Boot之Spring Data JPA)<br/>
-springboot-mybatis(Spring Boot之Mybatis)<br/>
+springboot-jpa(Spring Data JPA)<br/>
+springboot-mybatis<br/>
 
 安全<br/>
-springboot-shiro(Spring Boot之Shiro)<br/>
+springboot-shiro<br/>
 
 扩展<br/>
-springboot-fastjson(Spring Boot之使用fastjson替换jackson进行json转化)<br/>
-springboot-druid(Spring Boot之集成druid)<br/>
+springboot-fastjson(使用fastjson替换jackson进行json转化)<br/>
+springboot-druid<br/>
+springboot-ehcache<br/>
+springboot-uploadfile<br/>
+springboot-ueditor<br/>
 
 # 参考
 [spring-boot-examples](https://github.com/ityouknow/spring-boot-examples)<br/>
