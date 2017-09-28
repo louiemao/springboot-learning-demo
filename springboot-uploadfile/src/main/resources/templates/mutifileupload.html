@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>批量文件上传示例</title>
+</head>
+<body>
+<h2>批量文件上传示例</h2>
+<hr/>
+<form method="POST" enctype="multipart/form-data"
+      action="/upload/batch">
+    <p>
+        文件1：<input type="file" name="file" />
+    </p>
+    <p>
+        文件2：<input type="file" name="file" />
+    </p>
+    <p>
+        文件3：<input type="file" name="file" />
+    </p>
+    <p>
+        <input type="submit" value="上传" />
+    </p>
+</form>
+</body>
+</html>
