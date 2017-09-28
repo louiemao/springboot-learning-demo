@@ -26,6 +26,8 @@
         <module>springboot-thymeleaf</module>
         <!-- Spring Boot 之 jsp -->
         <module>springboot-jsp</module>
+        <!-- Spring Boot 之 freemarker -->
+        <module>springboot-freemarker</module>
 
         <!--数据访问-->
         <!-- Spring Boot 之 Spring Data JPA -->
@@ -41,7 +43,10 @@
         <module>springboot-fastjson</module>
         <!-- Spring Boot 之 集成druid -->
         <module>springboot-druid</module>
+        <!-- Spring Boot 之 集成ehcache -->
         <module>springboot-ehcache</module>
+        <!-- Spring Boot 之 上传文件 -->
+        <module>springboot-uploadfile</module>
 
     </modules>
 
