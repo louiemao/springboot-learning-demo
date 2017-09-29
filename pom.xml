@@ -47,8 +47,9 @@
         <module>springboot-ehcache</module>
         <!-- Spring Boot 之 上传文件 -->
         <module>springboot-uploadfile</module>
-        <!-- Spring Boot 之 ueditor -->
+        <!-- Spring Boot 之 集成百度富文本编辑器ueditor -->
         <module>springboot-ueditor</module>
+        <module>springboot-actuator</module>
 
     </modules>
 
