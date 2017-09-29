@@ -37,14 +37,16 @@
 
         <!--安全-->
         <module>springboot-shiro</module>
+        <module>springboot-security</module>
+
+        <!--缓存-->
+        <module>springboot-ehcache</module>
 
         <!--扩展-->
         <!-- Spring Boot 之 使用fastjson替换jackson进行json转化 -->
         <module>springboot-fastjson</module>
         <!-- Spring Boot 之 集成druid -->
         <module>springboot-druid</module>
-        <!-- Spring Boot 之 集成ehcache -->
-        <module>springboot-ehcache</module>
         <!-- Spring Boot 之 上传文件 -->
         <module>springboot-uploadfile</module>
         <!-- Spring Boot 之 集成百度富文本编辑器ueditor -->
