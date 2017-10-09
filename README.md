@@ -22,6 +22,12 @@ springboot-mybatis<br/>
 安全<br/>
 springboot-shiro<br/>
 
+消息
+springboot-rabbitmq<br/>
+
+工作流
+springboot-activiti<br/>
+
 扩展<br/>
 springboot-fastjson(使用fastjson替换jackson进行json转化)<br/>
 springboot-druid<br/>

@@ -42,6 +42,12 @@
         <!--缓存-->
         <module>springboot-ehcache</module>
 
+        <!--消息-->
+        <module>springboot-rabbitmq</module>
+
+        <!--工作流-->
+        <module>springboot-activiti</module>
+
         <!--扩展-->
         <!-- Spring Boot 之 使用fastjson替换jackson进行json转化 -->
         <module>springboot-fastjson</module>
