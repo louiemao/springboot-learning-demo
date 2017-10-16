@@ -1,17 +1,17 @@
 package com.louie.learning.springboot.dao;
 
-import com.louie.learning.springboot.model.TUser;
+import com.louie.learning.springboot.model.User;
 
 public interface UserDao {
     int deleteByPrimaryKey(String id);
 
-    int insert(TUser record);
+    int insert(User record);
 
-    int insertSelective(TUser record);
+    int insertSelective(User record);
 
-    TUser selectByPrimaryKey(String id);
+    User selectByPrimaryKey(String id);
 
-    int updateByPrimaryKeySelective(TUser record);
+    int updateByPrimaryKeySelective(User record);
 
-    int updateByPrimaryKey(TUser record);
+    int updateByPrimaryKey(User record);
 }
