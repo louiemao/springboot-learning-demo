@@ -138,8 +138,9 @@
 
         <table schema="${gererator.schema}"
                tableName="${gererator.tableName}"
-               domainObjectName="${gererator.objectName}"
+               domainObjectName="${gererator.domainObjectName}"
                mapperName="${gererator.mapperName}"
+
                enableCountByExample="false"
                enableUpdateByExample="false" enableDeleteByExample="false"
                enableSelectByExample="false" selectByExampleQueryId="false"></table>
