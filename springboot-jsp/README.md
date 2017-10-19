@@ -53,6 +53,10 @@ public class ServletInitializer extends SpringBootServletInitializer {
 ```
 这个类的作用与在web.xml中配置负责初始化Spring应用上下文的监听器作用类似，只不过在这里不需要编写额外的XML文件了。
 
+配置打包成war包
+```
+<packaging>war</packaging>
+```
 如果要将最终的打包形式改为war的话，还需要对pom.xml文件进行修改，因为spring-boot-starter-web中包含内嵌的tomcat容器，所以直接部署在外部容器会冲突报错。
 这里有两种方法可以解决:
 ```
