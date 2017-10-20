@@ -58,6 +58,7 @@
         <!-- Spring Boot 之 集成百度富文本编辑器ueditor -->
         <module>springboot-ueditor</module>
         <module>springboot-actuator</module>
+        <module>springboot-proguard</module>
 
     </modules>
 
