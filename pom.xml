@@ -37,6 +37,7 @@
 
         <!--文档-->
         <module>springboot-restdocs</module>
+        <module>springboot-swagger</module>
 
         <!--安全-->
         <module>springboot-shiro</module>
