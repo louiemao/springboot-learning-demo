@@ -35,6 +35,9 @@
         <!-- Spring Boot 之 Mybatis -->
         <module>springboot-mybatis</module>
 
+        <!--文档-->
+        <module>springboot-restdocs</module>
+
         <!--安全-->
         <module>springboot-shiro</module>
         <module>springboot-security</module>
@@ -58,6 +61,7 @@
         <!-- Spring Boot 之 集成百度富文本编辑器ueditor -->
         <module>springboot-ueditor</module>
         <module>springboot-actuator</module>
+        <!--混淆-->
         <module>springboot-proguard</module>
 
     </modules>
