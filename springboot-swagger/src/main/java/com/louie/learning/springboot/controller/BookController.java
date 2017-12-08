@@ -6,6 +6,7 @@ import io.swagger.annotations.*;
 import org.springframework.http.MediaType;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 import springfox.documentation.annotations.ApiIgnore;
 
 import java.util.*;
@@ -19,7 +20,7 @@ import java.util.*;
  * Created by fangzhipeng on 2017/4/17.
  * 官方文档：http://swagger.io/docs/specification/api-host-and-base-path/
  */
-@Api(description = "图书")
+@Api(value = "这个好像没用", description = "图书")
 @RestController
 @RequestMapping(value = "/books")
 public class BookController {
@@ -96,4 +97,31 @@ public class BookController {
     }
 
 
+    @ApiOperation(value = "上传文件测试")
+    @ApiImplicitParams({
+            @ApiImplicitParam(name = "file", value = "文件", required = true, dataType = "file", paramType = "form"),
+            @ApiImplicitParam(name = "params", value = "其他参数", required = true, dataType = "String", paramType = "query")
+    })
+    @PostMapping(value = "/upload")
+    public String upload(MultipartFile file, String params) {
+        if (file != null) {
+            return "上传成功 params="+params;
+        } else {
+            return "未获取到文件";
+        }
+    }
+
+    @ApiOperation(value = "多上传文件测试,不成功")
+    @ApiImplicitParams({
+            @ApiImplicitParam(name = "files", value = "文件", required = true, dataType = "file[]", paramType = "form"),
+            @ApiImplicitParam(name = "params", value = "其他参数", required = true, dataType = "String", paramType = "form")
+    })
+    @PostMapping(value = "/upload2")
+    public String upload2(MultipartFile[] files, String params) {
+        if (files != null) {
+            return "上传成功 params="+params;
+        } else {
+            return "未获取到文件";
+        }
+    }
 }
