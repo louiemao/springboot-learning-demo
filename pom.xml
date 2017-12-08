@@ -64,6 +64,8 @@
         <module>springboot-actuator</module>
         <!--混淆-->
         <module>springboot-proguard</module>
+        <!--定时任务-->
+        <module>springboot-scheduling</module>
 
     </modules>
 
