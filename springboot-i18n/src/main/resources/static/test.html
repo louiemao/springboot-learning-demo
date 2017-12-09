@@ -1,0 +1,73 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>国际化</title>
+</head>
+<body>
+<label data-locale="selectlanguage">select language:</label>
+<select id="selectLanguage" onchange="onLanguageChange(this.value)">
+    <option value="zh_CN">简体中文</option>
+    <option value="en_US">English</option>
+</select>
+<br/>
+<br/>
+<label data-locale="username">username：</label><input type="text">
+<label data-locale="password">password：</label><input type="password">
+
+
+<script src="lib/jquery/jquery-3.2.1.min.js"></script>
+<!-- 加载语言包文件 -->
+<script src="lib/jquery/jquery.i18n.properties-min-1.0.9.js"></script>
+<script type="text/javascript">
+    $(function () {
+        var lan = getCookie('language');
+        if (lan == "") {
+            lan = $.i18n.browserLang();
+        }
+        var selectLanguage = document.getElementById("selectLanguage");
+        selectLanguage.value = lan;
+        loadProperties(lan);
+    });
+
+    function onLanguageChange(lang) {
+        setCookie("language",lang,30);
+        window.location.reload(true);
+    }
+
+    function setCookie(cname, cvalue, exdays) {
+        var d = new Date();
+        d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+        var expires = "expires=" + d.toGMTString();
+        document.cookie = cname + "=" + cvalue + "; " + expires;
+    }
+
+    function getCookie(cname) {
+        var name = cname + "=";
+        var ca = document.cookie.split(';');
+        for (var i = 0; i < ca.length; i++) {
+            var c = ca[i].trim();
+            if (c.indexOf(name) == 0) return c.substring(name.length, c.length);
+        }
+        return "";
+    }
+
+    function loadProperties(lan) {
+        jQuery.i18n.properties({
+            name: 'messages',    //属性文件名     命名格式： 文件名_国家代号.properties
+            path: 'i18n/',   //注意这里路径是你属性文件的所在文件夹
+            mode: 'map',
+//            language:$.i18n.browserLang(),     //这就是国家代号 name+language刚好组成属性文件名：strings+zh -> strings_zh_CN.properties
+            language: lan,     //这就是国家代号 name+language刚好组成属性文件名：strings+zh -> strings_zh_CN.properties
+            callback: function () {
+                $("[data-locale]").each(function () {
+                    console.log($(this).data("locale"));
+                    $(this).html($.i18n.prop($(this).data("locale")));
+                });
+            }
+        });
+    }
+</script>
+</body>
+</html>

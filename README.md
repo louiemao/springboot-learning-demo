@@ -421,7 +421,9 @@ SpringApplication的run方法的实现是我们本次旅程的主要线路，该
 ![](images/0014.png)
 
 # 参考
-[Spring Boot干货系列总纲](http://tengj.top/2017/04/24/springboot0/)<br/>
+[嘟嘟独立博客-Spring Boot干货系列总纲](http://tengj.top/2017/04/24/springboot0/)<br/>
+[纯洁的微笑-Sping Boot系列文章](http://www.ityouknow.com/spring-boot)<br/>
+[程序猿DD-Spring Boot系列](http://blog.didispace.com/categories/Spring-Boot/)<br/>
 [spring-boot-examples](https://github.com/ityouknow/spring-boot-examples)<br/>
 [springboot-learning-example](https://github.com/JeffLi1993/springboot-learning-example)<br/>
 [SpringBoot-Learning](https://git.oschina.net/didispace/SpringBoot-Learning)<br/>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>玩转spring boot——国际化</title>
+</head>
+<body>
+<h1>玩转spring boot——国际化</h1>
+<br/>
+<br/>
+<a href="/?lang=en_US">English(US)</a>
+<a href="/?lang=zh_CN">简体中文</a>
+<br/>
+<h3 th:text="#{hello}+ ' , ' + ${world}"></h3>
+</body>
+</html>

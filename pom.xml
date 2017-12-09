@@ -66,6 +66,8 @@
         <module>springboot-proguard</module>
         <!--定时任务-->
         <module>springboot-scheduling</module>
+        <!--国际化-->
+        <module>springboot-i18n</module>
 
     </modules>
 
