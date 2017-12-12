@@ -57,12 +57,18 @@ spring.datasource.druid.stat-view-servlet.login-password=admin
 spring.datasource.druid.stat-view-servlet.allow=127.0.0.1,169.24.49.36
 #spring.datasource.druid.stat-view-servlet.deny=
 #配置StatFilter
-spring.datasource.druid.filter.stat.db-type=h2
+#spring.datasource.druid.filter.stat.db-type=h2
 spring.datasource.druid.filter.stat.log-slow-sql=true
 spring.datasource.druid.filter.stat.slow-sql-millis=2000
 #配置WallFilter
 spring.datasource.druid.filter.wall.enabled=true
-spring.datasource.druid.filter.wall.db-type=h2
+#spring.datasource.druid.filter.wall.db-type=h2
 spring.datasource.druid.filter.wall.config.delete-allow=false
 spring.datasource.druid.filter.wall.config.drop-table-allow=false
 ```
+
+# 参考
+[Druid Spring Boot Starter](https://github.com/alibaba/druid/tree/master/druid-spring-boot-starter)<br/>
+[Druid常见问题](https://github.com/alibaba/druid/wiki/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98)<br/>
+[配置_StatFilter](https://github.com/alibaba/druid/wiki/%E9%85%8D%E7%BD%AE_StatFilter)<br/>
+[配置-wallfilter](https://github.com/alibaba/druid/wiki/%E9%85%8D%E7%BD%AE-wallfilter)<br/>
