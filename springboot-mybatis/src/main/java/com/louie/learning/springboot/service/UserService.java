@@ -1,10 +1,14 @@
 package com.louie.learning.springboot.service;
 
+import com.github.pagehelper.Page;
+import com.github.pagehelper.PageHelper;
 import com.louie.learning.springboot.dao.UserDao;
 import com.louie.learning.springboot.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
+import java.util.List;
 
 @Service
 @Transactional(rollbackFor = Exception.class)
@@ -34,5 +38,17 @@ public class UserService {
 
     public int updateByPrimaryKey(User record) {
         return userDao.updateByPrimaryKey(record);
+    }
+
+    public List<User> findAll(Integer pageNum, Integer pageSize) {
+        if (pageNum != null && pageSize != null) {
+            PageHelper.startPage(pageNum, pageSize);
+        }
+        return userDao.findAll();
+    }
+
+    public Page<User> findByPage(int pageNum, int pageSize) {
+        PageHelper.startPage(pageNum, pageSize);
+        return userDao.findByPage();
     }
 }
