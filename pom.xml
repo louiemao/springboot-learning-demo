@@ -54,6 +54,7 @@
 
         <!--服务器-->
         <module>springboot-undertow</module>
+        <module>springboot-undertow-ssl</module>
 
         <!--扩展-->
         <!-- Spring Boot 之 使用fastjson替换jackson进行json转化 -->
