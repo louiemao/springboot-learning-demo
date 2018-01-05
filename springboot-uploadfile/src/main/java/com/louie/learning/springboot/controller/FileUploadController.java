@@ -34,7 +34,6 @@ public class FileUploadController {
      *
      * @param file
      * @return
-     *
      * @author 单红宇(CSDN CATOOP)
      * @create 2017年3月11日
      */
@@ -69,7 +68,6 @@ public class FileUploadController {
      *
      * @param request
      * @return
-     *
      * @author 单红宇(CSDN CATOOP)
      * @create 2017年3月11日
      */
@@ -96,5 +94,23 @@ public class FileUploadController {
             }
         }
         return "upload successful";
+    }
+
+    @RequestMapping(value = "upload/files", method = RequestMethod.POST)
+    @ResponseBody
+    public String uploadFiles(HttpServletRequest request, @RequestParam("file") MultipartFile file) {
+        if (file != null) {
+            File dir = new File("D:/temp");
+            if (!dir.exists()) {
+                dir.mkdirs();
+            }
+            try {
+                file.transferTo(new File(dir, file.getOriginalFilename()));
+            } catch (IOException e) {
+                e.printStackTrace();
+                return e.getMessage();
+            }
+        }
+        return "upload success";
     }
 }
