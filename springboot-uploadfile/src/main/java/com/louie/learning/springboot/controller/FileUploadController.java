@@ -10,7 +10,9 @@ import org.springframework.web.multipart.MultipartHttpServletRequest;
 
 import javax.servlet.http.HttpServletRequest;
 import java.io.*;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by Administrator on 2017/9/15.
@@ -98,7 +100,8 @@ public class FileUploadController {
 
     @RequestMapping(value = "upload/files", method = RequestMethod.POST)
     @ResponseBody
-    public String uploadFiles(HttpServletRequest request, @RequestParam("file") MultipartFile file) {
+    public Map<String,String> uploadFiles(HttpServletRequest request, @RequestParam("file") MultipartFile file) {
+        Map<String,String> result=new HashMap<>();
         if (file != null) {
             File dir = new File("D:/temp");
             if (!dir.exists()) {
@@ -106,11 +109,16 @@ public class FileUploadController {
             }
             try {
                 file.transferTo(new File(dir, file.getOriginalFilename()));
+                result.put("result","upload success");
+                return result;
             } catch (IOException e) {
                 e.printStackTrace();
-                return e.getMessage();
+                result.put("result",e.getMessage());
+                return result;
             }
+        }else{
+            result.put("result","没有获取到文件");
+            return result;
         }
-        return "upload success";
     }
 }
