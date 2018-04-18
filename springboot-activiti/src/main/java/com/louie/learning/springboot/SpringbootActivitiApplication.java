@@ -5,6 +5,9 @@ import com.louie.learning.springboot.dao.PersonRepository;
 import com.louie.learning.springboot.model.Comp;
 import com.louie.learning.springboot.model.Person;
 import com.louie.learning.springboot.service.ActivitiService;
+import org.activiti.engine.RepositoryService;
+import org.activiti.engine.RuntimeService;
+import org.activiti.engine.TaskService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -15,9 +18,9 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @SpringBootApplication
-@ComponentScan("com.louie.learning.springboot")
-@EnableJpaRepositories("com.louie.learning.springboot.dao")
-@EntityScan("com.louie.learning.springboot.model")
+//@ComponentScan("com.louie.learning.springboot")
+//@EnableJpaRepositories("com.louie.learning.springboot.dao")
+//@EntityScan("com.louie.learning.springboot.model")
 public class SpringbootActivitiApplication {
     @Autowired
     private CompRepository compRepository;
@@ -31,7 +34,10 @@ public class SpringbootActivitiApplication {
 
     //初始化模拟数据
     @Bean
-    public CommandLineRunner init(final ActivitiService myService) {
+    public CommandLineRunner init(final ActivitiService myService,
+                                  final RepositoryService repositoryService,
+                                  final RuntimeService runtimeService,
+                                  final TaskService taskService) {
         return new CommandLineRunner() {
             public void run(String... strings) throws Exception {
                 if (personRepository.findAll().size() == 0) {
@@ -49,6 +55,11 @@ public class SpringbootActivitiApplication {
                     personRepository.save(admin);
                     personRepository.save(wtr);
                 }
+                System.out.println("Number of process definitions : "
+                        + repositoryService.createProcessDefinitionQuery().count());
+                System.out.println("Number of tasks : " + taskService.createTaskQuery().count());
+                runtimeService.startProcessInstanceByKey("oneTaskProcess");
+                System.out.println("Number of tasks after process start: " + taskService.createTaskQuery().count());
             }
         };
     }

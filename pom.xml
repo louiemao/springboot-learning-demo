@@ -34,6 +34,7 @@
         <module>springboot-jpa</module>
         <!-- Spring Boot 之 Mybatis -->
         <module>springboot-mybatis</module>
+        <module>springboot-mybatis-multi-datasource</module>
 
         <!--文档-->
         <module>springboot-restdocs</module>
@@ -74,6 +75,8 @@
         <module>springboot-i18n</module>
         <!--AOP-->
         <module>springboot-aop</module>
+        <!--验证码-->
+        <module>springboot-kaptcha</module>
 
     </modules>
 
