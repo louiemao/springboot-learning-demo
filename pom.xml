@@ -77,6 +77,8 @@
         <module>springboot-aop</module>
         <!--验证码-->
         <module>springboot-kaptcha</module>
+        <!--Spring Statemachine 状态机-->
+        <module>springboot-statemachine</module>
 
     </modules>
 
